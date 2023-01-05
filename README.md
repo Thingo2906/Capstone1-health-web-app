@@ -6,8 +6,9 @@ Creating a website where users can use the BMI tool to calculate their body mass
 # API Using:
 - Used the fitness calculator API to calculate the BMI, calculate the daily calorie requirement for different goals:
 https://fitness-calculator.p.rapidapi.com/bmi
-    The fitness calculator API doesn’t have the data for users who weigh more than 160 kg.
+
 The fitness calculator API doesn’t have the data for users who weigh more than 160 kg.
+
 - Used spoonacular to find a recipe for users who love to cook at home.
 https://api.spoonacular.com/recipes/random?
 - Used the Youtube API to show some favorite videos related to eating healthy. 
