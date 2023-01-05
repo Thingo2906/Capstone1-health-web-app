@@ -4,16 +4,16 @@ Creating a website where users can use the BMI tool to calculate their body mass
 ![Schema](https://user-images.githubusercontent.com/93515126/210734304-fee45794-5095-4d4b-85b0-cc60b510b4b4.png)
 
 # API Using:
-- Used the fitness calculator API to calculate the BMI, calculate the daily calorie requirement for different goals:
+### Used the fitness calculator API to calculate the BMI, calculate the daily calorie requirement for different goals:
 https://fitness-calculator.p.rapidapi.com/bmi
 
     The fitness calculator API doesn’t have the data for users who weigh more than 160 kg.
 
-- Used spoonacular to find a recipe for users who love to cook at home.
+### Used spoonacular to find a recipe for users who love to cook at home.
 https://api.spoonacular.com/recipes/random?
-- Used the Youtube API to show some favorite videos related to eating healthy. 
+### Used the Youtube API to show some favorite videos related to eating healthy. 
 https://youtube.googleapis.com/youtube/v3/search?
-    The videos can only from 1 channel, and projects that enable the YouTube Data API have a default quota allocation of 10,000 units per day, an amount sufficient for the overwhelming majority of our API users. 
+     The videos can only from 1 channel, and projects that enable the YouTube Data API have a default quota allocation of 10,000 units per day, an amount sufficient for the overwhelming majority of our API users. 
 
 # Technology Stack:
 - Frontend: HTML5, CSS3, ES6, JavaScript
