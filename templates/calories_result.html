@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body id ="bg-grey">
+    <div class = "result">
+        <h4><i>You need {{calory_result['maintain_weight']}} calories to maintain your weight</i></h4>
+        <h4><i>You need {{calory_result['lose_weight']}} calories to lose 1kg</i></h4>
+        <h4><i>You need {{calory_result['gain_weight']}} calories to gain 1kg</i></h4>
+        
+    </div>
+
+</body>
+
+{% endblock %}

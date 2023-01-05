@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body id ="bg-grey">
+    <div class="card" style="border-radius: 15px; background-color: #e9f1ed;">
+		<div class="card-body p-4 text-black">
+			<div class="row">
+				<div class="col-md-4 gradient-custom text-center text-black">
+					<a href = "{{recipe['source']}}"><h3><b>{{recipe['title']}}</b></h3></a>
+					{% if recipe['image'] %}
+					<img src="{{recipe['image']}}" width="300px">
+					{% else %}
+					<img src="/static/defaut-food" width="300px">
+					{% endif %}
+				</div>
+				<div class="col-md-8">
+					<div class="card-body p-4">
+						<h5><b>Ingredients</b></h5>
+					    <hr class="mt-0 mb-4">
+					    <div class="row pt-1">
+						<ul>
+	
+							{% for ingredient in recipe.ingredients %}
+			
+								<li><b>{{ ingredient }}</b></li>
+			
+							{% endfor %}
+			
+						</ul>
+	
+					    </div>
+				
+					</div>	
+					
+				</div>
+			    <div>
+				    <h5><b>Instructions</b></h5>
+					<hr class="mt-0 mb-4">
+	                <ol>
+
+				    {% for instruction in recipe.instructions %}
+
+					    <li><b>{{ instruction }}</b></li>
+
+				    {% endfor %}
+
+			        </ol>     
+                </div>
+
+			</div>
+		</div>
+	
+</body>
+
+{% endblock %}

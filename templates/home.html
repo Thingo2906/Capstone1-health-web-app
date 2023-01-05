@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    
+   
+    <div class="container">
+        <div class="row">
+            <div class="col order-first">
+                <ul>
+                    {% for post in posts %}
+                       <a href="/posts/{{post.id}}" style="color:antiquewhite"><li>{{post.title}}</li></a>
+                       
+                    
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="text-center text-center--question"><b>What Can We Do For You Today?</b></h2>
+                <form method="GET" action="/bmi" class="text-center">
+                    <p class="icon"><i class="fa-duotone fa-weight-scale"></i></p>
+                    <button class="choice"><b>BMI Calculate</b></button>
+                </form>
+                <form method="GET" action="/calories" class="text-center">
+                    <p class="icon">🧮</p>
+                    <button class="choice"><b>Daily Calorie Requirements</b></button>
+                </form>
+                <form method="GET" action="/search-recipe" class="text-center">
+                    <p class="icon">🧆</p>
+                    <button class="choice"><b>Search For Recipe</b></button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+   
+{% endblock %}

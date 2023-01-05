@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body id="bg-teal">
+  <div class="card" style="border-radius: 15px; background-color: #93e2bb;">
+    <div class="card-body p-4 text-black">
+      <div class="row">
+        <div class="col-md-4 gradient-custom text-center text-white">
+          <img src="{{user.image_url}}" width="150px">
+          <h5 class="username"><b>@{{ user.username }}</b></h5>
+          {% if g.user.id == user.id %}
+          <form>
+            <button class="far fa-edit mb-5"
+            formmethod="GET"
+            formaction="/users/update">
+           </button>
+           <button class="fa fa-trash" formmethod="POST"
+            formaction="/users/delete">
+
+           </button>
+
+          </form>
+          {% endif %}
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body p-4">
+            <h5><b>Information</b></h5>
+            <hr class="mt-0 mb-4">
+            <div class="row pt-1">
+              <h6>Email : {{user.email}}</h6>
+            </div>
+             
+            <h5><b>Posts</b></h5>
+            <hr class="mt-0 mb-4">
+            <div class="row pt-1">
+              {% for post in user.posts %}
+              <div class="col-6 mb-3">
+                <h6><a href="/posts/{{post.id}}">{{post.title}}</a></h6>
+                <form>
+       
+                  <button class="btn btn-primary btn-sm"
+                          formmethod="GET"
+                          formaction="/posts/{{ post.id }}/update">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger btn-sm"
+                          formmethod="POST"
+                          formaction="/posts/{{ post.id }}/delete">
+                    Delete
+                  </button>
+                </form> 
+              </div>
+              {% endfor %}
+            </div>
+            
+
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+    
+    <ul class="content">
+      <li class="list-group-item">
+       {% if user_bmi|length > 0 %}
+       {% for x in user_bmi %}
+       <span class="text-muted">📅{{x.result_date.strftime('%d %B %Y') }}</span>
+       <b>BMI result: {{x.bmi}}</b>
+       <b>| Health Condition: {{x.health_condition}}</b>
+       <form>
+        <button class="btn btn-danger btn-sm"
+                formmethod="POST"
+                formaction="/bmi/{{ x.id }}/delete">
+          X
+        </button>
+       </form> 
+       {% endfor %}
+       {% endif %}
+      
+      </li>
+    </ul>
+</body>
+
+
+
+{% endblock %}

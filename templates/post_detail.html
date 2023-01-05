@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2><b>{{post.title}}</b></h2>
+
+<p>{{post.content}}</p>
+
+{% if post.image_url %}
+<div>
+  <img src="{{ post.image_url }}" width="400px"
+       alt="">
+</div>
+{% endif %}
+<p><i>By {{post.user.username}}</i></p>
+<span class="text-muted">📅{{post.timestamp.strftime('%d %B %Y') }}</span>
+
+{% endblock %}
