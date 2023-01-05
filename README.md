@@ -13,6 +13,7 @@ https://fitness-calculator.p.rapidapi.com/bmi
 https://api.spoonacular.com/recipes/random?
 ### Used the Youtube API to show some favorite videos related to eating healthy. 
 https://youtube.googleapis.com/youtube/v3/search?
+
      The videos can only from 1 channel, and projects that enable the YouTube Data API have a default quota allocation of 10,000 units per day, an amount sufficient for the overwhelming majority of our API users. 
 
 # Technology Stack:
