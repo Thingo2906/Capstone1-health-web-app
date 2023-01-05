@@ -1,5 +1,5 @@
 # Goal of Project:
-Creating a website where users can use the BMI tool to calculate their body mass index (BMI), and share their tips to maintain a healthy body. Also, users can find many recipes for their diet plans that fit their unique food preferences. 
+Creating a website where users can use the BMI tool to calculate their body mass index (BMI), calculate the daily calorie requirement for different goals. Also, users can find many recipes for their home cooking purpose.
 # Database Schema:
 ![Schema](https://user-images.githubusercontent.com/93515126/210734304-fee45794-5095-4d4b-85b0-cc60b510b4b4.png)
 
